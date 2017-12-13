@@ -388,6 +388,19 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
+					<control type="radiobutton" id="229">
+						<description>Hide Favorites Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31911]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="radiobutton" id="221">
 						<description>Hide Videos Button</description>
 						<width>750</width>
@@ -398,6 +411,32 @@
 						<label>$LOCALIZE[31111] - $LOCALIZE[3]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="230">
+						<description>Hide Media Server Movies Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31912]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoServerMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoServerMoviesButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="231">
+						<description>Hide Media Server TV Shows Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31913]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoServerTVShowsButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoServerTVShowsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -480,6 +519,68 @@
 						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="label" id="232">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31914</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="233">
+						<description>Media Server Movies Path</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31915]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(MediaServerMoviesPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(MediaServerMoviesPath)</onclick>
+					</control>
+					<control type="button" id="234">
+						<description>Media Server Movies Display Name</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31916]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(MediaServerMoviesName)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(MediaServerMoviesName)</onclick>
+					</control>
+					<control type="button" id="235">
+						<description>Media Server TV Shows Path</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31917]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(MediaServerTVShowsPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(MediaServerTVShowsPath)</onclick>
+					</control>
+					<control type="button" id="236">
+						<description>Media Server TV Shows Display Name</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31918]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(MediaServerTVShowsName)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(MediaServerTVShowsName)</onclick>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">

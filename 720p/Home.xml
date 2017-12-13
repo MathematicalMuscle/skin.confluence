@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus | Container(9000).Hasfocus(97) | Container(9000).Hasfocus(98) | Container(9000).Hasfocus(99)">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
@@ -989,6 +989,14 @@
 						<thumb>-</thumb>
 						<visible>PVR.HasTVChannels</visible>
 					</item>
+                    <!-- MODIFICATION: Add "Favorites" to the main menu -->
+					<item id="97">
+						<label>31961</label>
+						<onclick>ActivateWindow(Favourites,return)</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+					</item>
 					<!-- MODIFICATION: "Videos" goes straight to Video Addons -->
 					<item id="2">
 						<label>31953</label>
@@ -996,6 +1004,22 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+					</item>
+					<!-- MODIFICATION: Add Media Server Movies to the main menu -->
+					<item id="98">
+							<label>$INFO[Skin.String(MediaServerMoviesName)]</label>
+							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaServerMoviesPath)],return)</onclick>
+							<icon>-</icon>
+							<thumb>-</thumb>
+							<visible>!Skin.HasSetting(HomeMenuNoServerMoviesButton) + !String.IsEmpty(Skin.String(MediaServerMoviesPath)) + !String.IsEmpty(Skin.String(MediaServerMoviesName))</visible>
+					</item>
+					<!-- MODIFICATION: Add Media Server TV Shows to the main menu -->
+					<item id="99">
+						<label>$INFO[Skin.String(MediaServerTVShowsName)]</label>
+						<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaServerTVShowsPath)],return)</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoServerTVShowsButton) + !String.IsEmpty(Skin.String(MediaServerTVShowsPath)) + !String.IsEmpty(Skin.String(MediaServerTVShowsName))</visible>
 					</item>
 					<item id="10">
 						<label>31954</label>
@@ -1063,7 +1087,7 @@
 			<ondown>20</ondown>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | Container(9000).HasFocus(97) | Container(9000).HasFocus(98) | Container(9000).HasFocus(99)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>9001</onup>
