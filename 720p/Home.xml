@@ -989,10 +989,10 @@
 						<thumb>-</thumb>
 						<visible>PVR.HasTVChannels</visible>
 					</item>
+					<!-- MODIFICATION: "Videos" goes straight to Video Addons -->
 					<item id="2">
 						<label>31953</label>
-						<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-						<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+						<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
@@ -1019,10 +1019,10 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
+					<!-- MODIFICATION: "Programs" goes straight to Program Addons -->
 					<item id="1">
 						<label>31957</label>
-						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
-						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
@@ -1150,7 +1150,9 @@
 				<height>45</height>
 				<label>31003</label>
 				<font>-</font>
-				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<!-- MODIFICATION: on Android, quit when the power button is clicked -->
+				<onclick condition="!System.Platform.Android">ActivateWindow(ShutdownMenu)</onclick>
+				<onclick condition="System.Platform.Android">Quit</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
