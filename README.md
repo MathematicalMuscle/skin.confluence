@@ -27,7 +27,7 @@ This skin is a modification of [Confluence](https://github.com/xbmc/skin.conflue
   git checkout master
 
   # Create a new branch
-  git checkout -b leia_mm
+  git checkout -b master_mm
   ```
 
 1. To be continued...
