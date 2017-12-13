@@ -548,6 +548,38 @@ msgctxt "#31910"
 msgid "Maps"
 msgstr "Maps"
 
+msgctxt "#31911"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#31912"
+msgid "Media Server: Movies"
+msgstr "Media Server: Movies"
+
+msgctxt "#31913"
+msgid "Media Server: TV shows"
+msgstr "Media Server: TV shows"
+
+msgctxt "#31914"
+msgid "Media server settings"
+msgstr "Media server settings"
+
+msgctxt "#31915"
+msgid "Movies path"
+msgstr "Movies path"
+
+msgctxt "#31916"
+msgid "Movies display name"
+msgstr "Movies display name"
+
+msgctxt "#31917"
+msgid "TV shows path"
+msgstr "TV shows path"
+
+msgctxt "#31918"
+msgid "TV shows display name"
+msgstr "TV shows display name"
+
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WEATHER"
@@ -591,3 +623,7 @@ msgstr "SYSTEM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "FAVORITES"
+msgstr "FAVORITES"
