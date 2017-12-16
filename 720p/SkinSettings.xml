@@ -541,7 +541,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(MediaServerMoviesPath)</onclick>
+						<onclick>Skin.SetPath(MediaServerMoviesPath)</onclick>
 					</control>
 					<control type="button" id="234">
 						<description>Media Server Movies Display Name</description>
@@ -567,7 +567,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(MediaServerTVShowsPath)</onclick>
+						<onclick>Skin.SetPath(MediaServerTVShowsPath)</onclick>
 					</control>
 					<control type="button" id="236">
 						<description>Media Server TV Shows Display Name</description>
