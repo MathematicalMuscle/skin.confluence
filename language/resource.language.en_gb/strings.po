@@ -675,6 +675,22 @@ msgctxt "#31918"
 msgid "TV shows display name"
 msgstr "TV shows display name"
 
+msgctxt "#31919"
+msgid "Custom"
+msgstr "Custom"
+
+msgctxt "#31920"
+msgid "Custom item settings"
+msgstr "Custom item settings"
+
+msgctxt "#31921"
+msgid "Custom display name"
+msgstr "Custom display name"
+
+msgctxt "#31922"
+msgid "Custom action"
+msgstr "Custom action"
+
 #empty strings from id 31919 to 31949
 
 msgctxt "#31950"
