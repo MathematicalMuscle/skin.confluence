@@ -388,6 +388,19 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
+					<control type="radiobutton" id="237">
+						<description>Hide Custom Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31919]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoCustomButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoCustomButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="radiobutton" id="229">
 						<description>Hide Favorites Button</description>
 						<width>750</width>
@@ -581,6 +594,42 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetString(MediaServerTVShowsName)</onclick>
+					</control>
+					<control type="label" id="238">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31920</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="239">
+						<description>Custom display name</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31921]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomName)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(CustomName)</onclick>
+					</control>
+					<control type="button" id="240">
+						<description>Custom action</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31922]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomAction)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(CustomAction)</onclick>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">

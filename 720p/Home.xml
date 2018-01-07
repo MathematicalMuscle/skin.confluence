@@ -989,6 +989,14 @@
 						<thumb>-</thumb>
 						<visible>PVR.HasTVChannels</visible>
 					</item>
+					<!-- MODIFICATION: Add a custom menu item -->
+					<item id="96">
+							<label>$INFO[Skin.String(CustomName)]</label>
+							<onclick>$INFO[Skin.String(CustomAction)]</onclick>
+							<icon>-</icon>
+							<thumb>-</thumb>
+							<visible>!Skin.HasSetting(HomeMenuNoCustomButton) + !String.IsEmpty(Skin.String(CustomAction))</visible>
+					</item>
                     <!-- MODIFICATION: Add "Favorites" to the main menu -->
 					<item id="97">
 						<label>31961</label>
