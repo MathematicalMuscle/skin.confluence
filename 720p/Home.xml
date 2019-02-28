@@ -1021,8 +1021,8 @@
 					</item>
 					<item id="2">
 						<label>31953</label>
-						<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-						<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+                        <!-- MODIFICATION: "Videos" goes straight to Video Addons -->
+						<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 						<icon/>
 						<thumb/>
 						<visible>[!Skin.HasSetting(HomeMenuNoVideosButton) + !System.IsMaster] | [!Skin.HasSetting(MasterHomeMenuNoVideosButton) + System.IsMaster]</visible>
