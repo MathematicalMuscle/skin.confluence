@@ -1054,8 +1054,8 @@
 					</item>
 					<item id="1">
 						<label>31957</label>
-						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
-						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                        <!-- MODIFICATION: "Addons" goes straight to Program Addons -->
+						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 						<icon/>
 						<thumb/>
 						<visible>[!Skin.HasSetting(HomeMenuNoProgramsButton) + !System.IsMaster] | [!Skin.HasSetting(MasterHomeMenuNoProgramsButton) + System.IsMaster]</visible>
